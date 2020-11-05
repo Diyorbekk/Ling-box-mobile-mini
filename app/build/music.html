@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/00d5a78493aed4b11e2584ad7cceee49?family=Gilroy+ExtraBold" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="fonts/all.min.css">
+    <title>Ling Box</title>
+</head>
+<body>
+<div class="music-body">
+    <div class="position-absolute back-page">
+        <a href="week-list.html" class="text-decoration-none back-page-link"><i class="far fa-chevron-left"></i></a>
+    </div>
+
+
+    <div class="music">
+        <div class="music__content">
+            <p class="music__content-title">
+                Мистер Паника
+            </p>
+
+            <p class="music__content-rule font-weight-500 mb-0">
+                Для эффективного обучения
+            </p>
+            <p class="music__content-rule font-weight-500">
+                Вы должны соблюдать все правила:
+            </p>
+
+            <p class="music__content-hint">
+                Сконцентрируйтесь
+            </p>
+            <p class="music__content-hint">
+                Слушайте минимум 2 часа в день
+            </p>
+            <p class="music__content-hint">
+                Слушайте каждый урок минимум 7 дней и не перескакивайте их
+            </p>
+        </div>
+
+        <div class="player__content">
+            <div class="player__content-top">
+                <button type="button" class="btn">
+                    <img src="images/prev-5.svg" alt="prev">
+                </button>
+                <button type="button" id="play" class="btn player__content-play">
+                    <img src="images/play-icon.svg" class="player__content-icon" alt="play">
+                </button>
+                <button type="button" id="pause" class="btn player__content-play">
+                    <span class="player__content-pause mr-2"></span>
+                    <span class="player__content-pause"></span>
+                </button>
+                <button type="button" class="btn">
+                    <img src="images/next-5.svg" alt="next">
+                </button>
+            </div>
+            <div class="player__content-bottom">
+                <div class="player__content-load">
+                    <div class="player__content-loading"></div>
+                </div>
+
+                <p class="player__content-return">
+                    Начать заново
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<script src="scripts/jQuery.min.js"></script>
+<script src="scripts/common.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#pause').hide(0);
+
+        $('#play').on('click', function () {
+            $(this).hide(0);
+            $('#pause').show(0);
+        });
+        $('#pause').on('click', function () {
+            $(this).hide(0);
+            $('#play').show(0);
+        })
+    })
+</script>
+</body>
+</html>
