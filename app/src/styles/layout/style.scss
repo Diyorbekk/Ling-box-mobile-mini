@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*****                    *****/
+/*****  Login Page Start *****/
+/*****                  *****/
+
+.language-select {
+  color: #A8A8A8;
+  top: 53px;
+  right: 35px;
+
+  &:focus {
+    box-shadow: none;
+    outline: unset;
+  }
+
+  @media (max-width: 320px) {
+    top: 20px;
+    right: 30px;
+  }
+}
+
+.login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-icon {
+      width: auto;
+      height: auto;
+    }
+
+    &-text {
+      font-family: "Gilroy ExtraBold", sans-serif;
+      font-weight: 800;
+      text-align: center;
+      font-size: 20px;
+      color: #707070;
+      margin-top: 8px;
+      line-height: 24px;
+    }
+  }
+
+
+  &__content {
+    min-width: 75%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-input {
+      border: 1px solid #707070;
+      border-radius: 17px;
+
+      &::placeholder {
+        color: #A8A8A8;
+      }
+    }
+
+    &-btn {
+      background: #3285FC 0% 0% no-repeat padding-box;
+      border-radius: 17px;
+      color: white;
+      margin-bottom: 28px;
+
+      &:focus {
+        box-shadow: unset;
+        outline: unset;
+      }
+    }
+
+    &-link {
+      color: #A8A8A8;
+      font-size: 12px;
+      text-align: center;
+      display: block;
+      text-decoration: underline;
+
+    }
+  }
+
+}
+
+/*****                  *****/
+/*****  Login Page End *****/
+/*****                *****/
+
+/* ////////////////////// ////////////////////// */
+/* ////////////////////// ////////////////////// */
+/* ////////////////////// ////////////////////// */
+
+/*****                    *****/
+/*****  Month Page Start *****/
+/*****                  *****/
+
+.settings {
+  top: 53px;
+  right: 35px;
+
+  &:focus {
+    box-shadow: none;
+    outline: unset;
+  }
+
+  @media (max-width: 320px) {
+    top: 20px;
+    right: 30px;
+  }
+}
+
+/*****                  *****/
+/*****  Month Page End *****/
+/*****                *****/
+
+/* ////////////////////// ////////////////////// */
+/* ////////////////////// ////////////////////// */
+/* ////////////////////// ////////////////////// */

@@ -1,0 +1,47 @@
+// stylelint-disable declaration-no-important
+
+// Width and height
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (width: w, height: h) {
+      @each $size, $length in $sizes {
+        .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+      }
+    }
+
+    @each $value in $displays {
+      .d#{$infix}-#{$value} { display: $value !important; }
+    }
+  }
+}
+
+.mw-100 { max-width: 100% !important; }
+.mh-100 { max-height: 100% !important; }
+
+// Viewport additional helpers
+
+.min-vw-100 { min-width: 100vw !important; }
+.min-vh-100 { min-height: 100vh !important; }
+.min-vh-50 { min-height: 50vh !important; }
+
+.vw-100 { width: 100vw !important; }
+.vh-100 { height: 100vh !important; }
+.vh-95 { height: 95vh !important; }
+.vh-90 { height: 90vh !important; }
+.vh-85 { height: 85vh !important; }
+.vh-80 { height: 80vh !important; }
+.vh-75 { height: 75vh !important; }
+.vh-70 { height: 70vh !important; }
+.vh-55 { height: 55vh !important; }
+.vh-50 { height: 50vh !important; }
+.vh-45 { height: 45vh !important; }
+.vh-40 { height: 40vh !important; }
+.vh-35 { height: 35vh !important; }
+.vh-30 { height: 30vh !important; }
+.vh-25 { height: 25vh !important; }
+.vh-20 { height: 20vh !important; }
+.vh-15 { height: 15vh !important; }
+.vh-10 { height: 10vh !important; }
+.vh-5 { height: 5vh !important; }
